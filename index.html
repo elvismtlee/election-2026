@@ -1,18 +1,290 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>嘉義每日重點 2026-05-02</title>
+  <title>Elvis 李明燦｜嘉義市西區 2026 競選資訊站</title>
+  <meta name="description" content="桃城革新，城市革新。Elvis 李明燦嘉義市西區競選資訊首頁，整合政策主張、每日重點新聞、圖文影音素材。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f8f3;
+      --ink: #1f2a2a;
+      --muted: #526060;
+      --brand: #0f766e;
+      --brand-deep: #0a4e49;
+      --warm: #d97706;
+      --card: rgba(255, 255, 255, 0.9);
+      --line: rgba(15, 118, 110, 0.18);
+      --shadow: 0 12px 40px rgba(15, 42, 42, 0.12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, #d8efe9 0%, transparent 60%),
+        radial-gradient(900px 600px at 110% 10%, #fce7c2 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+      padding: 26px 0 70px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(140deg, rgba(255,255,255,0.96), rgba(234,247,243,0.88));
+      box-shadow: var(--shadow);
+      padding: 38px 34px;
+      animation: riseIn 700ms ease-out both;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.12);
+      color: var(--brand-deep);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+
+    h1 {
+      margin: 12px 0 10px;
+      font-family: "Noto Serif TC", serif;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.25;
+      font-size: clamp(31px, 4.8vw, 52px);
+    }
+
+    .subtitle {
+      font-size: clamp(17px, 2.2vw, 22px);
+      color: var(--brand-deep);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .acrostic {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+      margin: 14px 0 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #1c3a39;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.25);
+    }
+
+    .btn-soft {
+      background: #fff;
+      color: var(--brand-deep);
+      border-color: var(--line);
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(12, 40, 38, 0.08);
+      animation: riseIn 720ms ease-out both;
+    }
+
+    .card h2,
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      line-height: 1.35;
+      color: var(--brand-deep);
+    }
+
+    .candidate { grid-column: span 12; }
+    .policy { grid-column: span 4; }
+    .assets { grid-column: span 7; }
+    .review { grid-column: span 5; }
+
+    .policy p,
+    .candidate p,
+    .assets p,
+    .review p { margin: 0 0 9px; color: var(--muted); }
+
+    ul.clean {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    ul.clean li { margin: 5px 0; }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .link-tile {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 11px;
+      background: rgba(255,255,255,0.86);
+      transition: border-color .16s ease, transform .16s ease;
+      font-weight: 700;
+    }
+
+    .link-tile small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .link-tile:hover {
+      transform: translateY(-1px);
+      border-color: rgba(15,118,110,0.45);
+    }
+
+    .foot {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #5e6c6c;
+    }
+
+    @media (max-width: 980px) {
+      .policy { grid-column: span 12; }
+      .assets, .review { grid-column: span 12; }
+      .links { grid-template-columns: 1fr; }
+      .hero { padding: 30px 20px; }
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <h1>嘉義每日重點（2026-05-02）</h1>
-  <ul>
-    <li><a href="./chiayi-daily-news-2026-05-02.md">今日主稿</a></li>
-    <li><a href="./image-prompts-2026-05-02.csv">圖片提示詞 CSV</a></li>
-    <li><a href="./storyboard.md">分鏡表</a></li>
-    <li><a href="./narration.txt">旁白</a></li>
-    <li><a href="./subtitles.srt">字幕</a></li>
-  </ul>
+  <main class="wrap">
+    <section class="hero">
+      <span class="badge">2026 嘉義市西區市議員｜Elvis 李明燦</span>
+      <h1>桃城革新，城市革新</h1>
+      <div class="subtitle">西區幸福文藝桃，嘉義美滿科技城</div>
+      <div class="acrostic">
+        <div>西 區 幸 福 文 藝 桃</div>
+        <div>嘉 義 美 滿 科 技 城</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="./chiayi-daily-news-2026-05-02.md">查看今日主稿</a>
+        <a class="btn btn-soft" href="./youtube-publish-final-2026-05-02.txt">YouTube 發布文案</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card candidate">
+        <h2>候選人定位</h2>
+        <p>清大 電機 碩士、成大 電機 學士，曾任半導體產業主管，現為唐恩文化有限公司負責人，創辦台灣模型車博物館與唐恩書店。</p>
+        <p>核心路線：以專業科技能力，結合在地文化溫度，打造西區家庭可感受的幸福生活。</p>
+      </article>
+
+      <article class="card policy">
+        <h3>主張 1｜科技落地進社區</h3>
+        <ul class="clean">
+          <li>市場與店家導入 AI 工具與數位收付。</li>
+          <li>學校與社區推動 AI 素養與數位課程。</li>
+          <li>擴充公共 Wi-Fi、智慧路燈、環境感測。</li>
+        </ul>
+      </article>
+
+      <article class="card policy">
+        <h3>主張 2｜高齡友善與智慧健康</h3>
+        <ul class="clean">
+          <li>推動智慧預約、遠距服務、到宅諮詢。</li>
+          <li>擴大樂齡據點與社區陪伴網絡。</li>
+          <li>導入健康監測與緊急通報近便工具。</li>
+        </ul>
+      </article>
+
+      <article class="card policy">
+        <h3>主張 3｜青年留鄉與就業</h3>
+        <ul class="clean">
+          <li>串接科學園區、無人機、先進供應鏈職缺。</li>
+          <li>建立青年創業媒合、導師與資源路徑。</li>
+          <li>擴展文創與展演就業，打造多元舞台。</li>
+        </ul>
+      </article>
+
+      <article class="card assets">
+        <h3>今日圖文影音素材入口</h3>
+        <p>已整理可直接發布的新聞主稿、圖片提示詞、影片腳本與字幕檔。</p>
+        <div class="links">
+          <a class="link-tile" href="./chiayi-daily-news-2026-05-02.md">主稿（市政 / 競選 / 媒體）<small>含來源與風險點</small></a>
+          <a class="link-tile" href="./image-prompts-2026-05-02.csv">AI 圖片提示詞 CSV<small>22 張用途與風格</small></a>
+          <a class="link-tile" href="./storyboard.md">YouTube 分鏡表<small>90-120 秒節奏</small></a>
+          <a class="link-tile" href="./narration.txt">旁白稿<small>可直接錄製</small></a>
+          <a class="link-tile" href="./subtitles.srt">字幕檔 SRT<small>可直接匯入剪輯</small></a>
+          <a class="link-tile" href="./youtube-publish-final-2026-05-02.txt">YouTube 發布包<small>標題 / 描述 / 章節 / 置頂</small></a>
+        </div>
+      </article>
+
+      <article class="card review">
+        <h3>發布前審核提醒</h3>
+        <ul class="clean">
+          <li>企業時程與產能，以上市公司與官方公告為準。</li>
+          <li>政策補助期程，發布前再核對最新部會頁面。</li>
+          <li>國際趨勢屬推估，避免表述為確定事實。</li>
+          <li>所有示意圖需標示：AI 情境示意圖。</li>
+        </ul>
+        <p class="foot">更新時間：2026-05-02（Asia/Taipei）</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
