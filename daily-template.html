@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>嘉義重點新聞 {{DATE}}｜Elvis 李明燦</title>
+  <meta name="description" content="嘉義市與嘉義縣每日重點新聞整理：科技、文化、幸福。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/site.css" />
+</head>
+<body>
+  <main class="wrap" style="padding-top: 18px;">
+    <a class="brand" href="./index.html">← 返回首頁</a>
+
+    <section class="hero" style="margin-top: 10px;">
+      <span class="badge">嘉義每日重點新聞｜{{DATE}}</span>
+      <h1>{{TITLE}}</h1>
+      <p class="subtitle">科技、文化、幸福三主軸</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{REPORT_LINK}}">完整報告</a>
+        <a class="btn btn-soft" href="{{YOUTUBE_LINK}}">YouTube 文案</a>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="panel-head">
+        <h2>今日摘要</h2>
+        <span>發布前請複核來源與數據</span>
+      </div>
+      <p>{{SUMMARY}}</p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>AI 情境示意圖</h2>
+        <span>AI 情境示意圖（非現場實拍）</span>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="./assets/daily/{{DATE}}/cover-01.jpg" alt="AI 情境示意圖 1" />
+          <figcaption>科技落地進社區</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/daily/{{DATE}}/cover-02.jpg" alt="AI 情境示意圖 2" />
+          <figcaption>高齡友善與智慧健康</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/daily/{{DATE}}/cover-03.jpg" alt="AI 情境示意圖 3" />
+          <figcaption>青年留鄉與就業</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>更新時間：{{DATE}}（Asia/Taipei）</p>
+    </footer>
+  </main>
+</body>
+</html>

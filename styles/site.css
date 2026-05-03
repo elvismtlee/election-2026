@@ -1,0 +1,274 @@
+﻿:root {
+  --bg: #f4f6f2;
+  --ink: #1e2a28;
+  --muted: #536260;
+  --line: rgba(20, 87, 79, 0.2);
+  --card: rgba(255, 255, 255, 0.92);
+  --brand: #0f766e;
+  --brand-deep: #0c4f4a;
+  --warm: #d97706;
+  --shadow: 0 12px 36px rgba(11, 42, 39, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+  line-height: 1.75;
+  background: var(--bg);
+}
+
+.wrap {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.bg-orb {
+  position: fixed;
+  z-index: -1;
+  border-radius: 999px;
+  filter: blur(2px);
+}
+
+.bg-orb-a {
+  width: 520px;
+  height: 520px;
+  top: -190px;
+  left: -120px;
+  background: radial-gradient(circle at 30% 30%, #caefe7 0%, rgba(202, 239, 231, 0) 72%);
+}
+
+.bg-orb-b {
+  width: 460px;
+  height: 460px;
+  top: 0;
+  right: -150px;
+  background: radial-gradient(circle at 65% 25%, #ffe7bd 0%, rgba(255, 231, 189, 0) 72%);
+}
+
+.topbar {
+  padding: 20px 0 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--brand-deep);
+  font-weight: 900;
+  letter-spacing: .4px;
+  font-size: 18px;
+}
+
+.topnav {
+  display: flex;
+  gap: 16px;
+}
+
+.topnav a {
+  color: #33504e;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hero {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  background: linear-gradient(140deg, rgba(255,255,255,.97), rgba(231,247,242,.9));
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 34px 30px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-deep);
+  background: rgba(15,118,110,.12);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+h1, h2 {
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: .4px;
+}
+
+h1 {
+  margin: 10px 0 8px;
+  font-size: clamp(32px, 4.8vw, 52px);
+  line-height: 1.24;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--brand-deep);
+  font-size: clamp(18px, 2.2vw, 23px);
+  font-weight: 800;
+}
+
+.acrostic {
+  margin-top: 14px;
+  display: grid;
+  gap: 4px;
+  color: #25413f;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cta-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform .15s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(15,118,110,.24);
+}
+
+.btn-soft {
+  color: var(--brand-deep);
+  background: #fff;
+  border-color: var(--line);
+}
+
+.grid.three {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card,
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 8px 22px rgba(12, 40, 38, .08);
+}
+
+.card {
+  padding: 17px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: var(--brand-deep);
+}
+
+.card p { margin: 0; color: var(--muted); }
+
+.panel {
+  margin-top: 14px;
+  padding: 18px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.panel-head h2 {
+  margin: 0;
+  color: var(--brand-deep);
+  font-size: 27px;
+}
+
+.panel-head span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.gallery {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+figure img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #3a4d4b;
+  padding: 10px;
+}
+
+.history-list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.history-list li { margin: 6px 0; }
+
+.history-list a {
+  color: #124f73;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.history-list a:hover { text-decoration: underline; }
+
+.footer {
+  margin: 16px 0 48px;
+  color: #5a6766;
+  font-size: 13px;
+}
+
+@media (max-width: 960px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .grid.three,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 28px 18px;
+  }
+
+  .panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
