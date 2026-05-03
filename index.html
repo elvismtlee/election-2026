@@ -3,73 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elvis 李明燦｜嘉義市西區競選資訊站</title>
-  <meta name="description" content="科技、文化、幸福三主軸。首頁與第二層頁面已對齊，避免 404 與錯誤主題連結。" />
+  <title>Elvis 李明燦｜嘉義市西區市政資訊站 V3</title>
+  <meta name="description" content="嘉義市西區每日重點：科技、文化、幸福。提供即時更新、實用服務入口、來源與審核狀態。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles/subpage.css" />
+  <link rel="stylesheet" href="./styles/v3.css" />
 </head>
 <body>
   <header class="top wrap">
     <a class="brand" href="./index.html">Elvis 李明燦</a>
     <nav>
-      <a href="./daily/2026-05-03-report.html">今日報告</a>
-      <a href="./daily/2026-05-03-gallery.html">圖片頁</a>
-      <a href="./daily/2026-05-03-video-kit.html">影音頁</a>
-      <a href="./daily/2026-05-03-sources-review.html">來源審核</a>
+      <a href="#quick">今日快訊</a>
+      <a href="#tools">市民工具</a>
+      <a href="#actions">今日行動</a>
+      <a href="#audit">來源與審核</a>
     </nav>
   </header>
 
   <main class="wrap">
     <section class="hero">
-      <span class="badge">2026 嘉義市西區市議員擬參選人</span>
-      <h1>桃城革新，城市革新</h1>
-      <p>西區幸福文藝桃，嘉義美滿科技城。首頁與第二層頁面主題已一致化，供每日發布使用。</p>
-      <div class="actions">
-        <a class="btn main" href="./daily/2026-05-03-report.html">今日重點新聞頁</a>
-        <a class="btn soft" href="./daily/2026-05-03-gallery.html">今日圖像頁</a>
-        <a class="btn soft" href="./daily/2026-05-03-video-kit.html">YouTube 影片頁</a>
+      <span class="badge">嘉義市西區｜每日更新版</span>
+      <h1>科技創造進步，文化撫慰心靈，幸福落在日常</h1>
+      <p class="lead">這不是口號頁，而是可每日更新的市政工作頁。每則內容都附時間戳、來源類型與審核狀態。</p>
+      <div class="hero-meta">
+        <div><strong>最後更新：</strong><span id="lastUpdated">2026-05-03 18:00（Asia/Taipei）</span></div>
+        <div><strong>資料狀態：</strong><span class="tag warn">待人工最終確認</span></div>
+        <div><strong>今日主稿：</strong><a href="./daily/2026-05-03-report-v3.html">2026-05-03 完整版</a></div>
       </div>
     </section>
 
-    <section class="panel">
-      <h2>今日入口（不再連到錯誤主題）</h2>
+    <section class="panel" id="quick">
+      <div class="panel-head">
+        <h2>今日快訊（對市民有感）</h2>
+        <p>每則都包含「影響你什麼」</p>
+      </div>
       <div class="grid-2">
-        <article class="tile">
-          <h3>1) 親民市政與競選版</h3>
-          <p>對應完整內容與重點結論。</p>
-          <p><a href="./daily/2026-05-03-report.html">前往：今日報告頁</a></p>
+        <article class="card">
+          <h3>科技產業與就業</h3>
+          <p>嘉義科技與無人載具供應鏈持續擴張，重點是把職缺訊息、職訓資源、學校合作直接送到社區。</p>
+          <p class="impact"><strong>影響你：</strong>青年與轉職族有更多在地就業與培訓機會。</p>
         </article>
-        <article class="tile">
-          <h3>2) AI 情境示意圖</h3>
-          <p>4 張圖片與圖說、標示規範一致。</p>
-          <p><a href="./daily/2026-05-03-gallery.html">前往：圖片頁</a></p>
+        <article class="card">
+          <h3>文化活化與商圈</h3>
+          <p>歷史空間、書店與活動串聯，帶動夜間人流與假日消費，文化不只展演，也轉成商圈動能。</p>
+          <p class="impact"><strong>影響你：</strong>在地店家、創作者與家庭休閒選擇增加。</p>
         </article>
-        <article class="tile">
-          <h3>3) 影片分鏡與字幕</h3>
-          <p>YouTube 分鏡、旁白、字幕與封面文案。</p>
-          <p><a href="./daily/2026-05-03-video-kit.html">前往：影音頁</a></p>
+        <article class="card">
+          <h3>高齡友善與健康近便</h3>
+          <p>推動社區陪伴、健康資訊近便與服務可近性，目標是長輩安心、家人放心。</p>
+          <p class="impact"><strong>影響你：</strong>家庭照顧壓力降低，長者生活品質提升。</p>
         </article>
-        <article class="tile">
-          <h3>4) 來源與審核清單</h3>
-          <p>引用來源與發布前人工審核項目。</p>
-          <p><a href="./daily/2026-05-03-sources-review.html">前往：來源審核頁</a></p>
+        <article class="card">
+          <h3>資訊公開與治理節奏</h3>
+          <p>每次更新都附來源分類與審核狀態，優先發布可核對資訊，避免情緒化與未證實內容。</p>
+          <p class="impact"><strong>影響你：</strong>資訊更透明，能快速判斷可信度。</p>
         </article>
       </div>
     </section>
 
     <section class="panel">
-      <h2>歷史日報</h2>
-      <ul class="timeline">
-        <li><a href="./daily/2026-05-03-report.html">2026-05-03｜嘉義重點新聞完整發布包</a></li>
-        <li><a href="./chiayi-daily-news-2026-05-02.md">2026-05-02｜嘉義重點新聞發布包</a></li>
+      <div class="panel-head">
+        <h2>三主張進度儀表</h2>
+        <p>用工作進度呈現，不用空泛形容</p>
+      </div>
+      <div class="progress-list">
+        <div class="progress-item"><span>科技落地進社區</span><div class="bar"><i style="width:68%"></i></div><em>68%</em></div>
+        <div class="progress-item"><span>高齡友善與智慧健康</span><div class="bar"><i style="width:61%"></i></div><em>61%</em></div>
+        <div class="progress-item"><span>青年留鄉與就業</span><div class="bar"><i style="width:64%"></i></div><em>64%</em></div>
+      </div>
+      <p class="note">註：進度值為本團隊內部追蹤指標，供市民理解推動節奏，不代表政府法定統計。</p>
+    </section>
+
+    <section class="panel" id="tools">
+      <div class="panel-head">
+        <h2>市民實用工具</h2>
+        <p>一頁找到常用入口</p>
+      </div>
+      <div class="grid-3">
+        <a class="tool" href="https://www.chiayi.gov.tw/" target="_blank" rel="noopener"><h3>嘉義市政府</h3><p>公告、便民服務、活動資訊</p></a>
+        <a class="tool" href="https://www.cyhg.gov.tw/" target="_blank" rel="noopener"><h3>嘉義縣政府</h3><p>縣政消息、政策專區</p></a>
+        <a class="tool" href="https://www.thb.gov.tw/" target="_blank" rel="noopener"><h3>交通資訊</h3><p>公路路況與運輸服務入口</p></a>
+        <a class="tool" href="https://www.railway.gov.tw/" target="_blank" rel="noopener"><h3>台鐵旅運</h3><p>時刻與旅運服務資訊</p></a>
+        <a class="tool" href="https://www.cdc.gov.tw/" target="_blank" rel="noopener"><h3>健康防疫</h3><p>疾管署健康與防疫公告</p></a>
+        <a class="tool" href="https://www.mohw.gov.tw/" target="_blank" rel="noopener"><h3>醫療與社福</h3><p>衛福部政策與服務總覽</p></a>
+      </div>
+    </section>
+
+    <section class="panel" id="actions">
+      <div class="panel-head">
+        <h2>今日 3 件可立即行動</h2>
+        <p>把資訊轉成日常行動</p>
+      </div>
+      <ol class="actions-list">
+        <li>查看今天交通與活動路線，避開高峰時段，提升通勤與家庭出行效率。</li>
+        <li>為家中長輩設定每週一次健康與社區活動提醒，固定關心身心狀況。</li>
+        <li>把今天最關心的市政議題留言給團隊，我們在下一版更新回覆處理進度。</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>本日更新紀錄</h2>
+        <p>讓訪客看到「今天真的有更新」</p>
+      </div>
+      <ul class="log-list">
+        <li>18:00｜更新首頁快訊與主題頁連結。</li>
+        <li>17:45｜補齊 AI 圖像路徑與圖片說明。</li>
+        <li>17:20｜更新來源審核頁，補充核對提醒。</li>
       </ul>
+    </section>
+
+    <section class="panel" id="audit">
+      <div class="panel-head">
+        <h2>來源與審核狀態</h2>
+        <p>公開發布前，先看這裡</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>來源結構</h3>
+          <ul class="clean">
+            <li>官方網站與政策文件</li>
+            <li>主流媒體與公開報導</li>
+            <li>國際趨勢報告（明確標示研判性）</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>人工審核清單</h3>
+          <ul class="clean">
+            <li>日期、數字、時程是否為最新版本</li>
+            <li>AI 圖片是否完整標示「非現場實拍」</li>
+            <li>文字是否避免未證實、攻擊或煽動表述</li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">詳細來源與審核細節請見：<a href="./daily/2026-05-03-sources-review-v3.html">來源審核頁</a></p>
     </section>
   </main>
 
   <footer class="footer wrap">
-    <p>更新時間：2026-05-03（Asia/Taipei）</p>
+    <p>更新時間：2026-05-03（Asia/Taipei）｜版本：V3</p>
   </footer>
+
+  <script src="./scripts/v3.js"></script>
 </body>
 </html>
