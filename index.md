@@ -1,7 +1,7 @@
-# 嘉義每日重點（2026-05-14）
+# 嘉義每日重點（2026-05-15）
 
-- [今日主稿](./chiayi-daily-news-2026-05-14.md)
-- [圖片提示詞 CSV](./image-prompts-2026-05-14.csv)
+- [今日主稿](./chiayi-daily-news-2026-05-15.md)
+- [圖片提示詞 CSV](./image-prompts-2026-05-15.csv)
 - [分鏡表](./storyboard.md)
 - [旁白](./narration.txt)
 - [字幕](./subtitles.srt)
