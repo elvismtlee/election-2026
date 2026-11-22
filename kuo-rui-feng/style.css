@@ -83,3 +83,35 @@ dialog button { cursor: pointer; font: inherit; color: #17271f; background: var(
 .vote { background: #e5ece2; border: 1px solid #c7d7c8; border-radius: .65rem; padding: 1.15rem 1.35rem; }
 .vote p { margin-top: 0; }
 .vote strong { display: block; font-size: 1.3rem; margin-bottom: .35rem; }
+.masthead nav { flex-wrap: wrap; justify-content: flex-end; gap: .35rem clamp(.65rem, 1.6vw, 1.25rem); }
+.masthead nav a { font-size: .9rem; }
+.slogan { font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 850; margin: 0 0 .4rem; }
+.slogan mark { background: var(--gold); color: var(--forest); padding: 0 .15em; border-radius: .18rem; }
+.campaign-line { margin: .3rem 0; color: #e4ede4; font-weight: 700; }
+.intro { margin-top: .85rem; }
+.portrait img { object-position: center 22%; }
+.content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.content-card { background: white; border: 1px solid var(--line); border-radius: .7rem; padding: clamp(1rem, 3vw, 1.45rem); }
+.content-card h3, .content-card h4 { margin: 0 0 .55rem; font-size: 1.15rem; }
+.content-card ul, .content-card dl, .content-card p { margin-block: .5rem; }
+.content-card ul { padding-inline-start: 1.3rem; }
+.content-card li + li { margin-top: .35rem; }
+.wide { grid-column: 1 / -1; }
+.experience { columns: 2; column-gap: 2.3rem; }
+.experience li { break-inside: avoid; }
+.card-details dt { font-weight: 800; }
+.card-details dd { margin: 0 0 .65rem; }
+button.button { cursor: pointer; font-family: inherit; font-size: inherit; line-height: inherit; }
+address { font-style: normal; margin: .6rem 0; }
+.contact-links { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin-bottom: 1rem; }
+.report-form { max-width: 44rem; display: grid; gap: .65rem; }
+.report-form label { font-weight: 750; }
+.report-form select, .report-form textarea { font: inherit; color: inherit; padding: .55rem; border: 1px solid #7d9384; border-radius: .35rem; background: white; }
+.report-actions { display: flex; gap: .65rem; flex-wrap: wrap; padding-top: .4rem; }
+.action-status { position: fixed; z-index: 3; inset: auto 1rem 1rem; margin: auto; width: fit-content; max-width: calc(100% - 2rem); padding: .65rem 1rem; border-radius: .45rem; color: white; background: var(--forest); }
+@media (max-width: 660px) {
+  section { scroll-margin-top: 9rem; }
+  .masthead nav { justify-content: flex-start; }
+  .content-grid { grid-template-columns: 1fr; }
+  .experience { columns: 1; }
+}

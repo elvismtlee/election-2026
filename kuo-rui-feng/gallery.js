@@ -41,3 +41,43 @@ videos.forEach(video => {
     });
   });
 });
+
+const actionStatus = document.querySelector('#action-status');
+let statusTimeout;
+
+async function copyText(text, successMessage) {
+  try {
+    await navigator.clipboard.writeText(text);
+    actionStatus.textContent = successMessage;
+  } catch {
+    actionStatus.textContent = '無法存取剪貼簿，請手動複製或直接致電。';
+  }
+  actionStatus.hidden = false;
+  clearTimeout(statusTimeout);
+  statusTimeout = setTimeout(() => { actionStatus.hidden = true; }, 5000);
+}
+
+document.querySelectorAll('[data-copy]').forEach(button => {
+  button.addEventListener('click', () => copyText(button.dataset.copy, '已複製到剪貼簿。'));
+});
+
+document.querySelector('#share-campaign').addEventListener('click', async () => {
+  const url = new URL(location.pathname, location.origin).href;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: document.title, url });
+      return;
+    } catch (error) {
+      if (error.name === 'AbortError') return;
+    }
+  }
+  await copyText(url, '已複製官網連結。');
+});
+
+document.querySelector('#service-report').addEventListener('submit', event => {
+  event.preventDefault();
+  const type = document.querySelector('#service-type').value;
+  const detail = document.querySelector('#service-detail').value.trim();
+  const report = [`保生里里務通報｜${type}`, detail].filter(Boolean).join('\n');
+  copyText(report, '已複製通報內容，請貼到手機簡訊後自行送出。');
+});
